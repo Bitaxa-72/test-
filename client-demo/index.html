@@ -7,7 +7,7 @@
     <title>Косметик-эстетист — профессиональное обучение</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
   </head>
@@ -15,67 +15,56 @@
     <header class="header">
       <div class="header__inner">
         <a class="header__brand" href="#hero" aria-label="На главную">
-          <span class="header__brand-mark">КЭ</span>
-          <span class="header__brand-text">Учебный центр<br>эстетической косметологии</span>
+          <span class="header__brand-name">Козырь</span>
+          <span class="header__brand-description">Учебный центр<br>эстетической косметологии</span>
         </a>
-        <nav class="header__nav" aria-label="Основная навигация">
-          <a class="header__nav-link" href="#program">Программа</a>
-          <a class="header__nav-link" href="#format">Формат обучения</a>
-          <a class="header__nav-link" href="#contact">Контакты</a>
+        <nav class="header__navigation" aria-label="Основная навигация">
+          <a href="#program">О программе</a>
+          <a href="#format">Как проходит обучение</a>
+          <a href="#contact">Контакты</a>
         </nav>
-        <a class="header__cta" href="#contact">Получить программу <span aria-hidden="true">↗</span></a>
+        <a class="header__application-link" href="#contact">Оставить заявку</a>
         <button class="header__menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">
-          <span></span><span></span>
+          <span>Меню</span>
+          <i aria-hidden="true"></i>
         </button>
       </div>
-      <div class="header__mobile-menu" hidden>
-        <a href="#program">Программа</a>
-        <a href="#format">Формат обучения</a>
-        <a href="#contact">Получить программу</a>
-      </div>
+      <nav class="header__mobile-navigation" aria-label="Мобильная навигация" hidden>
+        <a href="#program">О программе</a>
+        <a href="#format">Как проходит обучение</a>
+        <a href="#contact">Контакты</a>
+        <a class="header__mobile-application" href="#contact">Оставить заявку</a>
+      </nav>
     </header>
 
     <main>
       <section class="hero" id="hero">
-        <div class="hero__inner">
-          <div class="hero__content">
-            <p class="hero__eyebrow">Профессиональное обучение</p>
-            <h1 class="hero__title">Косметик-эстетист<br>по уходу за лицом</h1>
-            <p class="hero__lead">Освойте профессию, в которой знания о коже становятся точной и бережной практикой.</p>
-            <div class="hero__actions">
-              <a class="hero__button hero__button--primary" href="#contact">Получить программу <span aria-hidden="true">→</span></a>
-              <a class="hero__button hero__button--text" href="#program">О курсе <span aria-hidden="true">↓</span></a>
-            </div>
-            <dl class="hero__facts" id="format">
-              <div class="hero__fact">
-                <dt>Основа программы</dt>
-                <dd>анатомия, диагностика и уход</dd>
-              </div>
-              <div class="hero__fact">
-                <dt>Подход</dt>
-                <dd>теория и практика на моделях</dd>
-              </div>
-            </dl>
+        <div class="hero__photo">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1800&q=88" alt="Специалист проводит косметологическую процедуру">
+          <p class="hero__photo-note">Практическое занятие<br>в учебном центре</p>
+        </div>
+        <div class="hero__body">
+          <p class="hero__kicker">Профессиональное обучение</p>
+          <h1 class="hero__title">Косметик-<span class="hero__mobile-break"><br></span>эстетист<br>по уходу за лицом</h1>
+          <p class="hero__description">Профессия, в которой важны знание, точность и бережное отношение к человеку.</p>
+          <div class="hero__actions">
+            <a class="hero__action hero__action--primary" href="#contact">Получить программу <span aria-hidden="true">→</span></a>
+            <a class="hero__action hero__action--secondary" href="#program">Подробнее о курсе</a>
           </div>
-
-          <div class="hero__visual" aria-label="Практическое занятие по уходу за лицом">
-            <div class="hero__visual-frame">
-              <img class="hero__image" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=85" alt="Специалист проводит процедуру по уходу за лицом">
-            </div>
-            <p class="hero__visual-caption">Практика<br>в малых группах</p>
-            <div class="hero__visual-index" aria-hidden="true">01</div>
+          <div class="hero__credentials" id="format">
+            <p>Лицензированная<br>образовательная программа</p>
+            <p>Документ об образовании<br>после завершения обучения</p>
           </div>
         </div>
-
-        <div class="hero__footer" id="program">
-          <p>Лицензированная образовательная программа</p>
-          <p>Документ об образовании по завершении обучения</p>
-        </div>
+        <div class="hero__side-note" aria-hidden="true">Эстетическая косметология</div>
       </section>
     </main>
 
+    <section class="program" id="program">
+      <p>Программа сочетает фундаментальные знания о коже и практику уходовых процедур.</p>
+    </section>
     <footer class="contact" id="contact">
-      <p>Оставьте заявку, чтобы получить подробную программу обучения.</p>
+      <p>Получите подробную программу обучения и условия ближайшего набора.</p>
     </footer>
   </body>
 </html>

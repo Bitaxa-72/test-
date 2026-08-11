@@ -1,19 +1,19 @@
 const menuButton = document.querySelector('.header__menu-button');
-const mobileMenu = document.querySelector('.header__mobile-menu');
+const mobileNavigation = document.querySelector('.header__mobile-navigation');
 
-if (menuButton && mobileMenu) {
+if (menuButton && mobileNavigation) {
   menuButton.addEventListener('click', () => {
-    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-    menuButton.setAttribute('aria-expanded', String(!isOpen));
-    menuButton.setAttribute('aria-label', isOpen ? 'Открыть меню' : 'Закрыть меню');
-    mobileMenu.hidden = isOpen;
+    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!isExpanded));
+    menuButton.setAttribute('aria-label', isExpanded ? 'Открыть меню' : 'Закрыть меню');
+    mobileNavigation.hidden = isExpanded;
   });
 
-  mobileMenu.querySelectorAll('a').forEach((link) => {
+  mobileNavigation.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       menuButton.setAttribute('aria-expanded', 'false');
       menuButton.setAttribute('aria-label', 'Открыть меню');
-      mobileMenu.hidden = true;
+      mobileNavigation.hidden = true;
     });
   });
 }
