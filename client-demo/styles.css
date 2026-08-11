@@ -156,7 +156,8 @@ a {
   padding: 46px 0 32px;
 }
 
-.hero__eyebrow {
+.hero__eyebrow,
+.benefits__heading > p {
   margin: 0 0 20px;
   color: var(--brand);
   font-size: 12px;
@@ -255,28 +256,77 @@ a {
 }
 
 .benefits {
+  padding: 48px 0;
   background: var(--white);
 }
 
-.benefits__inner {
-  display: grid;
-  gap: 0;
-  padding: 29px 0;
+.benefits__heading {
+  margin-bottom: 26px;
 }
 
-.benefits p {
+.benefits__heading > p {
+  margin-bottom: 12px;
+}
+
+.benefits__heading h2 {
   margin: 0;
-  padding: 20px 0;
+  font-size: clamp(25px, 7vw, 40px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.055em;
+}
+
+.benefits__grid {
+  display: grid;
+  gap: 10px;
+}
+
+.benefits__card {
+  display: flex;
+  min-height: 205px;
+  flex-direction: column;
+  padding: 20px;
+  background: var(--surface);
+}
+
+.benefits__card:nth-child(2),
+.benefits__card:nth-child(3) {
+  background: var(--surface-tint);
+}
+
+.benefits__card-number {
+  color: var(--brand);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.benefits__card h3 {
+  max-width: 245px;
+  margin: auto 0 12px;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+}
+
+.benefits__card p {
+  max-width: 280px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.48;
+}
+
+.benefits__document {
+  margin: 27px 0 0;
+  padding: 17px 0;
   border-top: 1px solid var(--line);
-  font-size: 14px;
-  line-height: 1.52;
-}
-
-.benefits p:last-child {
   border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-.benefits strong {
+.benefits__document strong {
   color: var(--brand);
 }
 
@@ -422,15 +472,42 @@ a {
     min-height: 550px;
   }
 
-  .benefits__inner {
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    padding: 40px 0;
+  .benefits {
+    padding: 76px 0;
   }
 
-  .benefits p,
-  .benefits p:last-child {
-    border-bottom: 0;
+  .benefits__heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 34px;
+  }
+
+  .benefits__heading > p {
+    margin-top: 8px;
+  }
+
+  .benefits__heading h2 {
+    font-size: 37px;
+  }
+
+  .benefits__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .benefits__card {
+    min-height: 258px;
+    padding: 25px;
+  }
+
+  .benefits__card h3 {
+    font-size: 20px;
+  }
+
+  .benefits__document {
+    margin-top: 35px;
+    padding: 20px 0;
+    font-size: 15px;
   }
 }
 
