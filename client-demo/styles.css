@@ -144,10 +144,22 @@ a {
 }
 
 .hero {
+  position: relative;
   background: var(--surface-tint);
 }
 
+.hero::before {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(238, 228, 227, 0.95) 0%, rgba(238, 228, 227, 0.84) 58%, rgba(238, 228, 227, 0.64) 100%),
+    url("https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=82") 60% center / cover no-repeat;
+  content: "";
+}
+
 .hero__inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
 }
@@ -221,9 +233,7 @@ a {
 }
 
 .hero__photo {
-  position: relative;
-  height: 318px;
-  overflow: hidden;
+  display: none;
 }
 
 .hero__photo::after {
@@ -439,6 +449,10 @@ a {
     min-height: 550px;
   }
 
+  .hero::before {
+    display: none;
+  }
+
   .hero__content {
     display: flex;
     flex-direction: column;
@@ -466,8 +480,11 @@ a {
   }
 
   .hero__photo {
+    display: block;
+    position: relative;
     height: auto;
     min-height: 550px;
+    overflow: hidden;
   }
 
   .benefits {
