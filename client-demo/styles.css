@@ -295,6 +295,33 @@ a {
   letter-spacing: -0.035em;
 }
 
+.mode-switch {
+  position: fixed;
+  z-index: 10;
+  bottom: 14px;
+  left: 14px;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(52, 48, 47, 0.56);
+  backdrop-filter: blur(8px);
+}
+
+.mode-switch__item {
+  display: grid;
+  width: 25px;
+  height: 23px;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.mode-switch__item--active {
+  color: var(--ink);
+  background: var(--white);
+}
+
 @media (min-width: 760px) {
   .container {
     width: min(100% - 80px, 1280px);
@@ -431,5 +458,10 @@ a {
   .button--secondary:hover {
     color: var(--white);
     background: var(--brand);
+  }
+
+  .mode-switch__item:not(.mode-switch__item--active):hover {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.16);
   }
 }
