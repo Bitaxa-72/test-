@@ -145,6 +145,8 @@ a {
 
 .hero {
   position: relative;
+  display: flex;
+  min-height: calc(100svh - 76px);
   background: var(--surface-tint);
 }
 
@@ -162,11 +164,16 @@ a {
   position: relative;
   z-index: 1;
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 
 .hero__content {
-  padding: 46px 0 32px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 36px 0;
 }
 
 .hero__eyebrow,
@@ -450,14 +457,17 @@ a {
     min-height: 550px;
   }
 
+  .hero {
+    display: block;
+    min-height: 0;
+  }
+
   .hero::before {
     display: none;
   }
 
   .hero__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex: initial;
     padding: 64px 6.8vw 64px 0;
   }
 
