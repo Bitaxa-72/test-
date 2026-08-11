@@ -343,7 +343,7 @@ a {
     font-size: 11px;
   }
 
-  .header__contact a {
+  .header__contact-text {
     font-size: 15px;
     font-weight: 600;
   }
@@ -445,8 +445,7 @@ a {
 }
 
 @media (hover: hover) {
-  .header__navigation a:hover,
-  .header__contact a:hover {
+  .header__navigation a:hover {
     color: var(--brand);
   }
 
