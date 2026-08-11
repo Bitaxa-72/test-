@@ -1,19 +1,19 @@
 const menuButton = document.querySelector('.header__menu-button');
-const mobileNavigation = document.querySelector('.header__mobile-navigation');
+const mobileMenu = document.querySelector('.mobile-menu');
 
-if (menuButton && mobileNavigation) {
+if (menuButton && mobileMenu) {
   menuButton.addEventListener('click', () => {
     const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
     menuButton.setAttribute('aria-expanded', String(!isOpen));
     menuButton.setAttribute('aria-label', isOpen ? 'Открыть меню' : 'Закрыть меню');
-    mobileNavigation.hidden = isOpen;
+    mobileMenu.hidden = isOpen;
   });
 
-  mobileNavigation.querySelectorAll('a').forEach((link) => {
+  mobileMenu.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       menuButton.setAttribute('aria-expanded', 'false');
       menuButton.setAttribute('aria-label', 'Открыть меню');
-      mobileNavigation.hidden = true;
+      mobileMenu.hidden = true;
     });
   });
 }

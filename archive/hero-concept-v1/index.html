@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Профессиональное обучение косметиков-эстетистов по уходу за лицом.">
+    <title>Косметик-эстетист — учебный центр</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <section class="hero" id="hero">
+      <header class="header">
+        <a class="header__logo" href="#hero">Козырь<span>академия</span></a>
+        <p class="header__descriptor">Эстетическая<br>косметология</p>
+        <nav class="header__navigation" aria-label="Основная навигация">
+          <a href="#program">Программа</a>
+          <a href="#contact">Консультация</a>
+        </nav>
+        <button class="header__menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <span>Меню</span>
+          <i aria-hidden="true"><b></b><b></b><b></b></i>
+        </button>
+      </header>
+      <nav class="mobile-menu" aria-label="Мобильная навигация" hidden>
+        <a href="#program">Программа обучения</a>
+        <a href="#benefits">О профессии</a>
+        <a href="#contact">Получить консультацию</a>
+      </nav>
+
+      <div class="hero__layout">
+        <div class="hero__introduction">
+          <p class="hero__label">Профессиональное обучение / 2026</p>
+          <h1 class="hero__title">Косметик<br><em>эстетист</em></h1>
+          <p class="hero__specialty">По уходу за лицом</p>
+        </div>
+
+        <div class="hero__artwork">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1800&q=90" alt="Процедура по уходу за лицом">
+          <p class="hero__artwork-caption">Практика —<br>основа профессии</p>
+        </div>
+
+        <div class="hero__information" id="benefits">
+          <p class="hero__statement">Научим понимать кожу, уверенно выполнять уходовые процедуры и выстраивать профессиональную практику.</p>
+          <a class="hero__application" href="#contact">Получить программу <span aria-hidden="true">↘</span></a>
+          <dl class="hero__details" id="program">
+            <div>
+              <dt>Формат</dt>
+              <dd>Теория и практика</dd>
+            </div>
+            <div>
+              <dt>Результат</dt>
+              <dd>Документ об образовании</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <p class="hero__vertical-note">Лицензированная образовательная программа</p>
+    </section>
+
+    <footer class="contact" id="contact">
+      <p>Получите программу обучения и информацию о ближайшем наборе.</p>
+    </footer>
+  </body>
+</html>
