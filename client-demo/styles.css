@@ -42,13 +42,13 @@ a {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  min-height: 67px;
+  min-height: 76px;
   padding: 0 18px;
   border-bottom: 1px solid rgba(233, 229, 220, 0.34);
 }
 
 .header__logo {
-  font-size: 19px;
+  font-size: 23px;
   font-weight: 600;
   letter-spacing: -0.08em;
 }
@@ -56,7 +56,7 @@ a {
 .header__logo span {
   margin-left: 5px;
   color: var(--acid);
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -76,7 +76,7 @@ a {
   color: var(--paper);
   background: none;
   font: inherit;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -107,7 +107,7 @@ a {
 .mobile-menu {
   position: absolute;
   z-index: 2;
-  top: 67px;
+  top: 76px;
   right: 0;
   left: 0;
   padding: 18px;
@@ -122,7 +122,7 @@ a {
   display: block;
   padding: 14px 0;
   border-bottom: 1px solid rgba(24, 32, 28, 0.32);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -138,13 +138,13 @@ a {
 .hero__introduction {
   position: relative;
   z-index: 1;
-  padding: 42px 18px 27px;
+  padding: 48px 20px 32px;
 }
 
 .hero__label {
   margin: 0 0 27px;
   color: var(--acid);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -152,7 +152,7 @@ a {
 
 .hero__title {
   margin: 0;
-  font-size: clamp(48px, 15vw, 78px);
+  font-size: clamp(52px, 15vw, 78px);
   font-weight: 500;
   line-height: 0.86;
   letter-spacing: -0.095em;
@@ -167,7 +167,7 @@ a {
 
 .hero__specialty {
   margin: 25px 0 0;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 500;
   letter-spacing: -0.04em;
 }
@@ -201,7 +201,7 @@ a {
   bottom: 13px;
   left: 14px;
   margin: 0;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: 0.035em;
@@ -210,7 +210,7 @@ a {
 
 .hero__information {
   position: relative;
-  padding: 28px 18px 25px;
+  padding: 32px 20px 30px;
   color: var(--ink);
   background: var(--acid);
 }
@@ -218,7 +218,7 @@ a {
 .hero__statement {
   max-width: 370px;
   margin: 0;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.39;
   letter-spacing: -0.04em;
@@ -228,12 +228,12 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 55px;
+  min-height: 62px;
   margin-top: 25px;
   padding: 0 15px;
   color: var(--paper);
   background: var(--night);
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -257,7 +257,7 @@ a {
 
 .hero__details dt {
   margin-bottom: 8px;
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -265,7 +265,7 @@ a {
 
 .hero__details dd {
   margin: 0;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -275,14 +275,14 @@ a {
 }
 
 .contact {
-  padding: 32px 18px;
+  padding: 35px 20px;
   background: var(--paper);
 }
 
 .contact p {
   max-width: 400px;
   margin: 0;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 500;
   line-height: 1.38;
   letter-spacing: -0.04em;
@@ -300,7 +300,7 @@ a {
     display: block;
     margin: 0;
     color: rgba(233, 229, 220, 0.6);
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 500;
     line-height: 1.35;
     letter-spacing: 0.04em;
@@ -315,7 +315,7 @@ a {
 
   .header__navigation a {
     color: rgba(233, 229, 220, 0.83);
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 500;
   }
 
@@ -366,7 +366,7 @@ a {
 
   .hero__statement {
     max-width: 390px;
-    font-size: 17px;
+    font-size: 19px;
   }
 
   .hero__application {
@@ -386,7 +386,7 @@ a {
     display: block;
     margin: 0;
     color: rgba(233, 229, 220, 0.52);
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
