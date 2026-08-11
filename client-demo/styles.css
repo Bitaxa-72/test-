@@ -1,9 +1,11 @@
 :root {
-  --night: #18201c;
-  --paper: #e9e5dc;
-  --acid: #e5ed48;
-  --rose: #df5c4d;
-  --ink: #17201c;
+  --night: #211f1d;
+  --paper: #f4f0e9;
+  --muted: #ddd5ca;
+  --accent: #bd5544;
+  --ink: #211f1d;
+  --line-light: rgba(244, 240, 233, 0.35);
+  --line-dark: rgba(33, 31, 29, 0.27);
 }
 
 * {
@@ -44,7 +46,7 @@ a {
   align-items: center;
   min-height: 76px;
   padding: 0 18px;
-  border-bottom: 1px solid rgba(233, 229, 220, 0.34);
+  border-bottom: 1px solid var(--line-light);
 }
 
 .header__logo {
@@ -55,7 +57,7 @@ a {
 
 .header__logo span {
   margin-left: 5px;
-  color: var(--acid);
+  color: var(--accent);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -82,26 +84,30 @@ a {
   text-transform: uppercase;
 }
 
-.header__menu-button i,
-.header__menu-button i::before {
+.header__menu-button i {
+  display: grid;
+  gap: 4px;
+  width: 16px;
+}
+
+.header__menu-button i b {
   display: block;
   width: 16px;
   height: 1px;
-  background: var(--acid);
-  content: "";
-  transition: transform 0.2s ease;
+  background: var(--paper);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.header__menu-button i::before {
-  transform: translateY(-5px);
+.header__menu-button[aria-expanded="true"] i b:first-child {
+  transform: translateY(5px) rotate(45deg);
 }
 
-.header__menu-button[aria-expanded="true"] i {
-  transform: rotate(45deg);
+.header__menu-button[aria-expanded="true"] i b:nth-child(2) {
+  opacity: 0;
 }
 
-.header__menu-button[aria-expanded="true"] i::before {
-  transform: rotate(90deg);
+.header__menu-button[aria-expanded="true"] i b:last-child {
+  transform: translateY(-5px) rotate(-45deg);
 }
 
 .mobile-menu {
@@ -111,7 +117,8 @@ a {
   right: 0;
   left: 0;
   padding: 18px;
-  background: var(--acid);
+  color: var(--ink);
+  background: var(--paper);
 }
 
 .mobile-menu[hidden] {
@@ -121,7 +128,7 @@ a {
 .mobile-menu a {
   display: block;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(24, 32, 28, 0.32);
+  border-bottom: 1px solid var(--line-dark);
   font-size: 16px;
   font-weight: 600;
 }
@@ -143,7 +150,7 @@ a {
 
 .hero__label {
   margin: 0 0 27px;
-  color: var(--acid);
+  color: var(--accent);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.09em;
@@ -161,7 +168,7 @@ a {
 .hero__title em {
   display: block;
   margin-left: 0.46em;
-  color: var(--rose);
+  color: var(--accent);
   font-style: normal;
 }
 
@@ -212,7 +219,7 @@ a {
   position: relative;
   padding: 32px 20px 30px;
   color: var(--ink);
-  background: var(--acid);
+  background: var(--paper);
 }
 
 .hero__statement {
@@ -232,13 +239,13 @@ a {
   margin-top: 25px;
   padding: 0 15px;
   color: var(--paper);
-  background: var(--night);
+  background: var(--accent);
   font-size: 15px;
   font-weight: 600;
 }
 
 .hero__application span {
-  color: var(--acid);
+  color: var(--paper);
   font-size: 19px;
   font-weight: 400;
 }
@@ -252,7 +259,7 @@ a {
 
 .hero__details div {
   padding-top: 10px;
-  border-top: 1px solid rgba(24, 32, 28, 0.34);
+  border-top: 1px solid var(--line-dark);
 }
 
 .hero__details dt {
@@ -299,7 +306,7 @@ a {
   .header__descriptor {
     display: block;
     margin: 0;
-    color: rgba(233, 229, 220, 0.6);
+    color: rgba(244, 240, 233, 0.63);
     font-size: 10px;
     font-weight: 500;
     line-height: 1.35;
@@ -314,7 +321,7 @@ a {
   }
 
   .header__navigation a {
-    color: rgba(233, 229, 220, 0.83);
+    color: rgba(244, 240, 233, 0.83);
     font-size: 13px;
     font-weight: 500;
   }
@@ -385,7 +392,7 @@ a {
     left: 18px;
     display: block;
     margin: 0;
-    color: rgba(233, 229, 220, 0.52);
+    color: rgba(244, 240, 233, 0.52);
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -401,11 +408,11 @@ a {
 
 @media (hover: hover) {
   .header__navigation a:hover {
-    color: var(--acid);
+    color: var(--accent);
   }
 
   .hero__application:hover {
-    color: var(--night);
-    background: var(--paper);
+    color: var(--paper);
+    background: var(--night);
   }
 }
